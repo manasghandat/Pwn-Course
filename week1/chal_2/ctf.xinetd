@@ -6,7 +6,7 @@ service pwn
     wait        = no
     user        = hacker
     type        = UNLISTED
-    port        = 8021
+    port        = 8002
     bind        = 0.0.0.0
     server      = /start.sh
     banner_fail = /etc/banner_fail

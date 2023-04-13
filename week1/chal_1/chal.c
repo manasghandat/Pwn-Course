@@ -5,10 +5,11 @@
 char buf[0x40] = {0};
 int kek ;
 
+__attribute__((constructor))
 void setup(){
-    setvbuf(stdout,NULL,2,0);
-    setvbuf(stderr,NULL,2,0);
-    setvbuf(stdin,NULL,2,0);
+  setvbuf(stdout,NULL,2,0);
+  setvbuf(stderr,NULL,2,0);
+  setvbuf(stdin,NULL,2,0);
 }
 
 void vuln(){
@@ -23,7 +24,6 @@ void vuln(){
 
 int main(int argc, char const *argv[])
 {
-    setup();
     vuln();
     return 0;
 }
