@@ -16,9 +16,7 @@ void vuln(){
     printf("Please enter name\n");
     gets(buf);
     if(kek==0x1337){
-        int fd = open("./flag",O_RDWR);
-        read(fd,buf,sizeof(buf));
-        printf("%s",buf);
+        system("/bin/sh");
     }
 }
 
